@@ -65,15 +65,6 @@
     <AssemblyOriginatorKeyFile>..\Ninject.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core">
-      <HintPath>..\..\..\packages\Castle.Core.3.0.0.4001\lib\net40-client\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\..\..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Extensions.Factory">
-      <HintPath>..\..\..\packages\Ninject.Extensions.Factory.3.0.1.0\lib\net40\Ninject.Extensions.Factory.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -158,6 +149,23 @@
       <Link>Ninject.snk</Link>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Ninject.Extensions.ChildKernel\src\Ninject.Extensions.ChildKernel\Ninject.Extensions.ChildKernel.csproj">
+      <Project>{9831975F-FA35-4B8B-A545-1A06852625BB}</Project>
+      <Name>Ninject.Extensions.ChildKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Ninject.Extensions.Factory\src\Ninject.Extensions.Factory\Ninject.Extensions.Factory.csproj">
+      <Project>{E57D8FFB-183C-4581-AE4E-4DABA7ABB080}</Project>
+      <Name>Ninject.Extensions.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Ninject\src\Ninject\Ninject.csproj">
+      <Project>{ADF369E2-6B9E-4D56-9B82-D273AE41EC2D}</Project>
+      <Name>Ninject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
